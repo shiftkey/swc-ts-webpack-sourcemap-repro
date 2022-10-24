@@ -1,3 +1,5 @@
+# `@swc/core` + `swc-loader` sourcemap repro
+
 This works for `@swc/core` version 1.3.3 or earlier:
 
 ```
