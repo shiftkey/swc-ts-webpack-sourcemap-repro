@@ -4,9 +4,7 @@
         "target": "es2020",
         "parser": {
           "syntax": "typescript",
-          "tsx": true,
-          "decorators": false,
-          "dynamicImport": true
+          "tsx": true
         },
         "transform": {
           "react": {
