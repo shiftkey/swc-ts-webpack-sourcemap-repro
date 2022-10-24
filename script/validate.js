@@ -30,7 +30,7 @@ function assertIsError(error) {
   return false;
 }
 
-glob(`${directory}/*.js`, (err, matches) => {
+glob(`${process.cwd()}/${directory}/*.js`, (err, matches) => {
   if (err) {
     throw err;
   }
