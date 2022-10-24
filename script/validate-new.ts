@@ -72,11 +72,11 @@ glob(`${process.cwd()}/${directory}/*.js`, async (err, matches) => {
         if (warning instanceof BadColumnError) {
           const { expected, source, token, message, mapping} = warning
           const {originalContext, originalColumn, originalLine, generatedColumn, generatedLine, generatedContext} = mapping
-          console.log(`BadColumnError found`, {message, source, token, expected});
+          console.log(`💥 BadColumnError found`, {message, source, token, expected});
           console.log(`Context`, {originalContext, originalColumn, originalLine, generatedColumn, generatedLine, generatedContext});
           console.log();
         } else {
-          console.log(`Warning found`, warning);
+          console.log(`💥 Warning found`, warning);
         }
         
       }

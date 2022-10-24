@@ -44,10 +44,10 @@ glob(`${process.cwd()}/${directory}/*.js`, (err, matches) => {
       const mapContent = readFileSync(mapPath, "utf-8");
       validate(bundleContent, mapContent);
       console.log(
-        `Validation for sourcemap at ${mapPath} completed without issues`
+        `✅ Validation for sourcemap at ${mapPath} completed without issues`
       );
     } catch (error) {
-      console.log(`Error for sourcemap at ${mapPath} encountered`);
+      console.log(`💥 Error for sourcemap at ${mapPath} encountered`);
       if (assertIsError(error) && error.code === "ENOENT") {
         // eslint-disable-next-line no-console
         console.error(
