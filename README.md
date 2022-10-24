@@ -42,20 +42,23 @@ Validating sourcemap /Users/shiftkey/src/swc-ts-webpack-sourcemap-repro/dist/web
  - BadColumnError found {
   message: 'Expected token not in correct location',
   source: 'webpack://swc-ts-webpack-sourcemap-repro/src/index.tsx',
-  token: '><App /></',
-  expected: 'StrictMode'
+  token: '/>',
+  expected: 'App'
 }
 Context {
   originalContext: [
-    [ 6, "const appContainer = document.getElementById('memex-root')" ],
-    [ 7, '' ],
-    [ 8, 'render(<StrictMode><App /></StrictMode>, appContainer)' ]
+    [
+      4,
+      "const appContainer = document.getElementById('project-root')"
+    ],
+    [ 5, '' ],
+    [ 6, 'render(<App />, appContainer)' ]
   ],
-  originalColumn: 18,
-  originalLine: 8,
-  generatedColumn: 138097,
+  originalColumn: 11,
+  originalLine: 6,
+  generatedColumn: 138079,
   generatedLine: 2,
-  generatedContext: '"memex-root");(0,r.render)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
+  generatedContext: 'mentById("project-root");(0,n.render)((0,e.jsx)(r,{}),l)})()})();'
 }
 
  - BadColumnError found {
@@ -66,34 +69,18 @@ Context {
 }
 Context {
   originalContext: [
-    [ 6, "const appContainer = document.getElementById('memex-root')" ],
-    [ 7, '' ],
-    [ 8, 'render(<StrictMode><App /></StrictMode>, appContainer)' ]
+    [
+      4,
+      "const appContainer = document.getElementById('project-root')"
+    ],
+    [ 5, '' ],
+    [ 6, 'render(<App />, appContainer)' ]
   ],
-  originalColumn: 23,
-  originalLine: 8,
-  generatedColumn: 138119,
+  originalColumn: 11,
+  originalLine: 6,
+  generatedColumn: 138080,
   generatedLine: 2,
-  generatedContext: 'der)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
-}
-
- - BadColumnError found {
-  message: 'Expected token not in correct location',
-  source: 'webpack://swc-ts-webpack-sourcemap-repro/src/index.tsx',
-  token: '/>',
-  expected: 'App'
-}
-Context {
-  originalContext: [
-    [ 6, "const appContainer = document.getElementById('memex-root')" ],
-    [ 7, '' ],
-    [ 8, 'render(<StrictMode><App /></StrictMode>, appContainer)' ]
-  ],
-  originalColumn: 23,
-  originalLine: 8,
-  generatedColumn: 138120,
-  generatedLine: 2,
-  generatedContext: 'er)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
+  generatedContext: 'entById("project-root");(0,n.render)((0,e.jsx)(r,{}),l)})()})();'
 }
 
 ```
