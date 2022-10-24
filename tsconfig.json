@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "target": "es2018",
+      "lib": ["es2019", "es2020", "ES2021", "dom", "dom.iterable"],
+      "jsx": "react-jsx",
+      "noEmitHelpers": true,
+      "importHelpers": true,
+      "strict": true,
+      "declaration": false,
+      "outDir": "./dist",
+      "rootDir": ".",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "types": ["react"],
+      "typeRoots": ["./node_modules/@types"],
+      "allowUnreachableCode": false,
+      "isolatedModules": true
+    },
+    "include": ["./src"],
+    "exclude": ["node_modules"]
+  }
+  
