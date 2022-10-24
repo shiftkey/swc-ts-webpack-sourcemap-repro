@@ -60,7 +60,7 @@ glob(`${process.cwd()}/${directory}/*.js`, async (err, matches) => {
       console.log(`✅ No errors found`);
     } else {
       for (const error of mappingsReport.errors) {
-        console.log(`Error found with mapping`, error);
+        console.log(`💥 Error found with mapping`, error);
       }
       process.exit(1);
     }
@@ -68,11 +68,12 @@ glob(`${process.cwd()}/${directory}/*.js`, async (err, matches) => {
     if (mappingsReport.warnings.length === 0) {
       console.log(`✅ No warnings found`);
     } else {
+      console.log(`💥 Warnings found:`);
       for (const warning of mappingsReport.warnings) {
         if (warning instanceof BadColumnError) {
           const { expected, source, token, message, mapping} = warning
           const {originalContext, originalColumn, originalLine, generatedColumn, generatedLine, generatedContext} = mapping
-          console.log(`💥 BadColumnError found`, {message, source, token, expected});
+          console.log(` - BadColumnError found`, {message, source, token, expected});
           console.log(`Context`, {originalContext, originalColumn, originalLine, generatedColumn, generatedLine, generatedContext});
           console.log();
         } else {

@@ -38,7 +38,8 @@ npm run webpack:new
 Validating bundle /Users/shiftkey/src/swc-ts-webpack-sourcemap-repro/dist/webpack/main.bundle.js
 Validating sourcemap /Users/shiftkey/src/swc-ts-webpack-sourcemap-repro/dist/webpack/main.bundle.js.map
 ✅ No errors found
-BadColumnError found {
+💥 Warnings found:
+ - BadColumnError found {
   message: 'Expected token not in correct location',
   source: 'webpack://swc-ts-webpack-sourcemap-repro/src/index.tsx',
   token: '><App /></',
@@ -57,7 +58,7 @@ Context {
   generatedContext: '"memex-root");(0,r.render)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
 }
 
-BadColumnError found {
+ - BadColumnError found {
   message: 'Expected token not in correct location',
   source: 'webpack://swc-ts-webpack-sourcemap-repro/src/index.tsx',
   token: '/>',
@@ -76,7 +77,7 @@ Context {
   generatedContext: 'der)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
 }
 
-BadColumnError found {
+ - BadColumnError found {
   message: 'Expected token not in correct location',
   source: 'webpack://swc-ts-webpack-sourcemap-repro/src/index.tsx',
   token: '/>',
@@ -94,7 +95,6 @@ Context {
   generatedLine: 2,
   generatedContext: 'er)((0,e.jsx)(n.StrictMode,{children:(0,e.jsx)(l,{})}),a)})()})();'
 }
-
 
 ```
 
