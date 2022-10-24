@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "all": "npm run cli:old && npm run cli:new && npm run webpack:old && npm run webpack:new",
     "webpack:old": "npm run repro:webpack && npm run validate:webpack",
     "webpack:new": "npm run repro:webpack && npm run validate:webpack:new",
     "repro:webpack": "webpack --config webpack.config.js",
