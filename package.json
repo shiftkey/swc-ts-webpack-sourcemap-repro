@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "npm run repro:webpack && npm run validate:webpack:new",
+    "webpack:old": "npm run repro:webpack && npm run validate:webpack",
+    "webpack:new": "npm run repro:webpack && npm run validate:webpack:new",
     "repro:webpack": "webpack --config webpack.config.js",
     "validate:webpack": "node script/validate.js dist/webpack/",
     "validate:webpack:new": "TS_NODE_PROJECT=\"tsconfig.cli.json\" ts-node script/validate-new.ts dist/webpack/",
-    "cli": "npm run repro:cli && npm run validate:cli:new",
+    "cli:old": "npm run repro:cli && npm run validate:cli",
+    "cli:new": "npm run repro:cli && npm run validate:cli:new",
     "repro:cli": "swc ./src/ -d ./dist/cli/ -s --config-file .swcrc",
-    "validate:cli": "node script/validate-new.js dist/cli/",
+    "validate:cli": "node script/validate.js dist/cli/",
     "validate:cli:new": "TS_NODE_PROJECT=\"tsconfig.cli.json\" ts-node script/validate-new.ts dist/cli/"
   },
   "keywords": [],
