@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "npm run repro:webpack && npm run validate:webpack",
+    "webpack": "npm run repro:webpack && npm run validate:webpack:new",
     "repro:webpack": "webpack --config webpack.config.js",
     "validate:webpack": "node script/validate.js dist/webpack/",
-    "cli": "npm run repro:cli && npm run validate:cli",
+    "validate:webpack:new": "TS_NODE_PROJECT=\"tsconfig.cli.json\" ts-node script/validate-new.ts dist/webpack/",
+    "cli": "npm run repro:cli && npm run validate:cli:new",
     "repro:cli": "swc ./src/ -d ./dist/cli/ -s --config-file .swcrc",
-    "validate:cli": "node script/validate.js dist/cli/"
+    "validate:cli": "node script/validate-new.js dist/cli/",
+    "validate:cli:new": "TS_NODE_PROJECT=\"tsconfig.cli.json\" ts-node script/validate-new.ts dist/cli/"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +26,12 @@
     "@types/glob": "^8.0.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/source-map": "^0.5.7",
     "glob": "^8.0.3",
     "sourcemap-validator": "^2.1.0",
+    "source-map": "^0.7.4",
     "swc-loader": "^0.2.3",
+    "ts-node": "^10.9.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
